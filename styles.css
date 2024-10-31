@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Styles */
+@font-face {
+    font-family: "Tiny5";
+    src: url('path/to/tiny5-regular.ttf') format('truetype'); /* Update the path if you have the file */
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Body Styling with Fallback Fonts */
+body {
+    font-family: "Tiny5", Arial, sans-serif; /* Main font with fallback */
+    color: #333;
+    background-image: url('https://quantifold.com/static/73fd3a763f01dbe5ad6947d5ec88e5cb/945a8/quantifold-blog-hero-programming.png'); /* Background image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* .tiny5-regular Class for Additional Sections */
+.tiny5-regular {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+nav {
+    text-align: center;
+    background: #404152;
+    padding: 1rem;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+.content-section {
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.skills-list, .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill, .project-card {
+    flex: 1 1 45%;
+    background: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #00aaff;
+    text-decoration: none;
+}

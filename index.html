@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Tiny5&display=swap');
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWAB.AWAB</title>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon (browser icon) -->
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMZ2SS6LNoS0c8EJEekxitY6UCc9-WtKxVTQ&s" type="image/png">
+</head>
+<body>
+    <div class="hero-section">
+        <header>
+            <h1 id="username"></h1> <!-- For username -->
+            <p id="tagline"></p> <!-- For tagline -->
+        </header>
+    </div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>As a dedicated software engineer, I specialize in crafting high-quality code, solving complex challenges, and staying updated with the latest tech advancements. My focus is on creating innovative solutions and sharing impactful knowledge with the tech community.</p>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <h3>Programming Languages</h3>
+                    <p>Python, JavaScript, C++</p>
+                </div>
+                <div class="skill">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, React</p>
+                </div>
+                <div class="skill">
+                    <h3>Software Development</h3>
+                    <p>Agile, Version Control, Testing</p>
+                </div>
+                <div class="skill">
+                    <h3>Tools</h3>
+                    <p>Git, VS Code, Docker</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>Project One</h3>
+                    <p>#1</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Two</h3>
+                    <p>#2</p>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2></h2>
+        <p>Connect with me on:</p>
+        <a href="https://x.com/home" target="_blank">Twitter</a> | 
+        <a href="https://www.facebook.com/?locale=ar_AR" target="_blank">Facebook</a> |
+        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">LinkedIn</a>
+        <p>&copy; 2024 Awab's Portfolio | Cleaned by AWAB</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const usernameElement = document.getElementById("username");
+            const taglineElement = document.getElementById("tagline");
+            const usernameText = "AWAB_ML";
+            const taglineText = "Dedicated Software Engineer & Programming Enthusiast /HELLO/";
+            let usernameIndex = 0;
+            let taglineIndex = 0;
+
+            function typeUsername() {
+                if (usernameIndex < usernameText.length) {
+                    usernameElement.textContent += usernameText.charAt(usernameIndex);
+                    usernameIndex++;
+                    setTimeout(typeUsername, 250); // Adjust speed here (150 ms per letter)
+                } else {
+                    typeTagline(); // Start typing tagline after username
+                }
+            }
+
+            function typeTagline() {
+                if (taglineIndex < taglineText.length) {
+                    taglineElement.textContent += taglineText.charAt(taglineIndex);
+                    taglineIndex++;
+                    setTimeout(typeTagline, 150); // Adjust speed here (150 ms per letter)
+                }
+            }
+
+            typeUsername(); // Start typing when the page loads
+        });
+    </script>
+</body>
+</html>
